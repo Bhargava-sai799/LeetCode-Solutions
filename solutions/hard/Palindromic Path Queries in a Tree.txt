@@ -1,0 +1,18 @@
+// Title: Palindromic Path Queries in a Tree
+            // Difficulty: Hard
+            // Language: Python3
+            // Link: https://leetcode.com/problems/palindromic-path-queries-in-a-tree/
+
+
+        ans = []
+        for q in queries:
+            kind, a, b = q.split()
+            if kind == 'update':
+                x, new_bit = int(a), 1 << ord(b) - 97
+                paths.flip(x, bit[x] ^ new_bit)  
+                bit[x] = new_bit
+            else:
+                u, v = int(a), int(b)
+                mask = paths[u] ^ paths[v] ^ bit[tree.lca(u, v)]  
+                ans.append(mask.bit_count() <= 1)  
+        return ans
