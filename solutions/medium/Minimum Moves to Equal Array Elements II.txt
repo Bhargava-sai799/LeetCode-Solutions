@@ -1,0 +1,22 @@
+// Title: Minimum Moves to Equal Array Elements II
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/
+
+                lo = [x for x in a if x < p]
+                if k < len(lo):
+                    a = lo
+                    continue
+                hi = [x for x in a if x > p]
+                if k >= len(a) - len(hi):
+                    k -= len(a) - len(hi)
+                    a = hi
+                    continue
+                return p  # pivot sits at position k
+                p = a[random.randrange(len(a))]
+                    return a[0]
+            while True:
+                if len(a) <= 1:
+class Solution:
+    def minMoves2(self, nums: List[int]) -> int:
+        def quickselect(a, k):
