@@ -1,0 +1,18 @@
+// Title: Count Servers that Communicate
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/count-servers-that-communicate/
+
+            for j in range(n):
+        for i in range(m):
+
+        col_cnt = [0] * n
+
+        """
+        m, n = len(grid), len(grid[0])
+        row_cnt = [0] * m
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+class Solution(object):
+    def countServers(self, grid):
