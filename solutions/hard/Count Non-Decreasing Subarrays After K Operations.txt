@@ -1,0 +1,18 @@
+// Title: Count Non-Decreasing Subarrays After K Operations
+            // Difficulty: Hard
+            // Language: Python3
+            // Link: https://leetcode.com/problems/count-non-decreasing-subarrays-after-k-operations/
+
+                water += (x - nums[s]) * (end - s)
+            starts.appendleft(l)
+            while water > k:  
+                end = starts[0] if starts else r + 1
+                s = starts.popleft()
+        for l in reversed(range(len(nums))):
+            x = nums[l]
+            while starts and nums[starts[0]] <= x:  
+    int:
+        starts = deque()  
+        ans, water, r = 0, 0, len(nums) - 1
+class Solution:
+    def countNonDecreasingSubarrays(self, nums: list[int], k: int) -> 
