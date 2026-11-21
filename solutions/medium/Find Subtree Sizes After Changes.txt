@@ -1,0 +1,15 @@
+// Title: Find Subtree Sizes After Changes
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/find-subtree-sizes-after-changes/
+
+            above = last.get(c, -1) 
+            last[c] = x
+            for child in children[x]:
+                dfs(child)
+            last[c] = above
+            if x:  
+                size[above if above >= 0 else parent[x]] += size[x]
+
+        dfs(0)
+        return size
