@@ -1,0 +1,15 @@
+// Title: Product of the Last K Numbers
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/product-of-the-last-k-numbers/
+
+
+    def getProduct(self, k: int) -> int:
+        
+        if k > self.size:
+            return 0
+        
+        return (
+            self.prefix_product[self.size] // self.prefix_product
+            [self.size - k]
+        )
