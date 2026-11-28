@@ -1,0 +1,18 @@
+// Title: Maximum Number of Items From Sale II
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/maximum-number-of-items-from-sale-ii/
+
+                    freq[i] += freq[j]
+
+        mn = items[0][1]
+        ans = 0
+        for factor, price in items:
+            if price > mn * 2:
+                break
+            cnt = freq[factor] - 1
+            take = min(cnt, budget // price)
+            ans += take * 2
+            budget -= take * price
+        ans += budget // mn
+        return ans
